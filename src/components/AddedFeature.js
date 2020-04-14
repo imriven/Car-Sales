@@ -1,11 +1,11 @@
 import React from 'react';
-import {connect} from "react-redux"
+import { useDispatch } from "react-redux"
 import { removeFeature } from "../Actions"
 
 const AddedFeature = props => {
-
+  const dispatch = useDispatch()
   const handleRemove = () => {
-    props.removeFeature(props.feature)
+    dispatch(removeFeature(props.feature))
   }
 
   return (
@@ -17,4 +17,5 @@ const AddedFeature = props => {
   );
 };
 
-export default connect(null, {removeFeature})(AddedFeature);
+//export default connect(null, {removeFeature})(AddedFeature);
+export default AddedFeature;

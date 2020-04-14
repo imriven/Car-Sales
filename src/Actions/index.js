@@ -15,3 +15,5 @@ export function removeFeature(feature) {
       payload: feature
     }
   }
+
+  //creates actions
